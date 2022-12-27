@@ -1,11 +1,11 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 
-import { Conteiner, Message }  from './App.styled';
+import { Conteiner, Message } from './App.styled';
 
-import  ContactForm  from './ContactForm/ContactForm';
-import  Filter  from './Filter/Filter';
-import  ContactList  from './ContactList/ContactList';
+import ContactForm from './ContactForm/ContactForm';
+import Filter from './Filter/Filter';
+import ContactList from './ContactList/ContactList';
 
 export default class App extends Component {
   state = {
@@ -59,7 +59,10 @@ export default class App extends Component {
           <>
             <h2>Contacts</h2>
             <Filter onInputChange={this.onInputChange} />
-            <ContactList filterContacts={filterContacts} deleteContact={this.deleteContact} />
+            <ContactList
+              filterContacts={filterContacts}
+              deleteContact={this.deleteContact}
+            />
           </>
         ) : (
           <Message>Contacts list is empty yet</Message>

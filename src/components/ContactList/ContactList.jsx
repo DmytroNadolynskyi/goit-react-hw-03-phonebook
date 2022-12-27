@@ -33,4 +33,4 @@ ContactList.propTypes = {
   deleteContact: PropTypes.func.isRequired,
 };
 
-export default ContactList
+export default ContactList;
