@@ -23,7 +23,7 @@ ContactList.propTypes = {
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 ContactList.propTypes = {
-  list: PropTypes.arrayOf(
+  filterContacts: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       number: PropTypes.string.isRequired,
