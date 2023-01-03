@@ -51,20 +51,20 @@ export default class App extends Component {
 
   componentDidMount() {
     const contacts = localStorage.getItem('contacts');
-    const parsedTodos = JSON.parse(contacts);
+    const parsedContacts = JSON.parse(contacts);
 
-    if (parsedTodos) {
-      this.setState({ contacts: parsedTodos });
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
     }
   }
 
   componentDidUpdate(prevState) {
 
-    const nextTodos = this.state.contacts;
-    const prevTodos = prevState.contacts;
+    const nextContacts = this.state.contacts;
+    const prevContacts = prevState.contacts;
 
-    if (nextTodos !== prevTodos) {
-      localStorage.setItem('contacts', JSON.stringify(nextTodos));
+    if (nextContacts !== prevContacts) {
+      localStorage.setItem('contacts', JSON.stringify(nextContacts));
     }
   }
 
