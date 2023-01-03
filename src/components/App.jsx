@@ -49,6 +49,26 @@ export default class App extends Component {
     }));
   };
 
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts');
+    const parsedTodos = JSON.parse(contacts);
+
+    if (parsedTodos) {
+      this.setState({ contacts: parsedTodos });
+    }
+  }
+
+  componentDidUpdate(prevState) {
+
+    const nextTodos = this.state.contacts;
+    const prevTodos = prevState.contacts;
+
+    if (nextTodos !== prevTodos) {
+      localStorage.setItem('contacts', JSON.stringify(nextTodos));
+    }
+  }
+
+
   render() {
     const filterContacts = this.filterContacts();
     return (
