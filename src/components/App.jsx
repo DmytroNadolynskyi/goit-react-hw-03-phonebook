@@ -15,7 +15,7 @@ export default class App extends Component {
 
   onFormSubmit = info => {
     const isContactRepeat = this.state.contacts.find(
-      el => el.name === info.name
+      el => el.name.toLowerCase() === info.name.toLowerCase()
     );
     if (isContactRepeat) {
       alert('Already in Contacts');
