@@ -49,24 +49,24 @@ export default class App extends Component {
     }));
   };
 
-  // componentDidMount() {
-  //   const contacts = localStorage.getItem('contacts');
-  //   const parsedContacts = JSON.parse(contacts);
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts);
 
-  //   if (parsedContacts) {
-  //     this.setState({ contacts: parsedContacts });
-  //   }
-  // }
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
+    }
+  }
 
-  // componentDidUpdate(prevState) {
+  componentDidUpdate(prevState) {
 
-  //   const nextContacts = this.state.contacts;
-  //   const prevContacts = prevState.contacts;
+    const nextContacts = this.state.contacts;
+    const prevContacts = prevState.contacts;
 
-  //   if (nextContacts !== prevContacts) {
-  //     localStorage.setItem('contacts', JSON.stringify(nextContacts));
-  //   }
-  // }
+    if (nextContacts !== prevContacts) {
+      localStorage.setItem('contacts', JSON.stringify(nextContacts));
+    }
+  }
 
 
   render() {
